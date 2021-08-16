@@ -1,1 +1,21 @@
-/* You can add global styles to this file, and also import other style files */
+// Импортируем ресэт стилей
+@import "assets/css/reset.css";
+
+// Импортируем шрифт
+@import "assets/fonts/Lab Grotesque/stylesheet.css";
+
+html, body {
+  height: 100%;
+  font-size: 18px;
+}
+
+body {
+  font-family: "Lab Grotesque", sans-serif;
+}
+
+.main-container {
+  max-width: 1390px;
+  width: 100%;
+  padding: 0 30px;
+  margin: 0 auto;
+}

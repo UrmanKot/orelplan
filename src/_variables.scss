@@ -1,0 +1,23 @@
+$themecolor-primary: #3C6ED1;
+$themecolor-secondary: #4FABF7;
+$themecolor-dark: #4A4A4A;
+$themecolor-light: #ffffff;
+$themecolor-alt: #FA690F;
+
+$text-color: #ffffff;
+$text-color-dark: #404040;
+
+$button-primary: linear-gradient(180deg, #FF8500 0%, #FA690F 93.75%);
+$button-secondary: linear-gradient(180deg, #0075FF 0%, #274BCA 93.75%);
+
+$main-background: linear-gradient(118.37deg, #3C6ED1 41.65%, #4FABF7 100%);
+$secondary-background: #E7EBF0;
+
+$mainFontSize: calc(12px + (16 - 12) * ((100vw - 360px) / (1920 - 360)));
+
+$desktopWidth : 1680px;
+$smDesktopWidth : 1140px;
+$tableWidth : 768px;
+$smTableWidth : 640px;
+$phoneWidth : 360px;
+$smPhoneWidth : 359px;
