@@ -6,6 +6,7 @@ import { HeaderComponent } from './shared/components/header/header.component';
 import { MainLayoutComponent } from './layouts/main-layout/main-layout.component';
 import { HomePageComponent } from './home-page/home-page.component';
 import { NavigationComponent } from './shared/components/navigation/navigation.component';
+import { FooterComponent } from './shared/components/footer/footer.component';
 
 
 @NgModule({
@@ -13,7 +14,8 @@ import { NavigationComponent } from './shared/components/navigation/navigation.c
     HeaderComponent,
     MainLayoutComponent,
     HomePageComponent,
-    NavigationComponent
+    NavigationComponent,
+    FooterComponent
   ],
   imports: [
     CommonModule,

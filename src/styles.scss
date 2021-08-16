@@ -1,5 +1,5 @@
 // Импортируем ресэт стилей
-@import "assets/css/reset.css";
+@import "assets/scss/reset";
 
 // Импортируем шрифт
 @import "assets/fonts/Lab Grotesque/stylesheet.css";
@@ -11,6 +11,7 @@ html, body {
 
 body {
   font-family: "Lab Grotesque", sans-serif;
+  line-height: 1.4;
 }
 
 .main-container {
