@@ -10,25 +10,50 @@
 .footer__top {
   border-bottom: 1px solid #39566e;
   padding: 50px 30px;
-
-  .footer__links {
-    display: grid;
-    gap: 50px;
-    grid-template-columns: 45% 55%;
-  }
+  display: grid;
+  align-items: center;
+  gap: 50px;
+  grid-template-columns: 45% calc(55% - 50px);
 
   .footer__link {
     display: flex;
     align-items: center;
+    color: $text-color;
+    width: max-content;
+
+    .icon {
+      max-width: 50px;
+      margin-right: 20px;
+
+      &_government {
+        position: relative;
+        top: -8px;
+      }
+
+      img {
+        width: 100%;
+        height: auto;
+      }
+    }
+
+    p {
+      max-width: 220px;
+    }
   }
 
-  .icon {
-    max-width: 50px;
-    margin-right: 20px;
+  .footer__right {
+    display: flex;
+    justify-content: space-between;
+  }
 
-    img {
-      width: 100%;
-      height: auto;
+  .footer__row {
+    &_left {
+      width: 50%;
+      margin-right: 30px;
+    }
+
+    &_right {
+      width: calc(50% - 30px);
     }
   }
 }
@@ -107,6 +132,7 @@
 
   .footer__left {
     margin-right: 30px;
+    width: 50%;
 
     p {
       max-width: 320px;
@@ -117,6 +143,8 @@
   }
 
   .footer__right {
+    width: calc(50% - 30px);
+
     h2 {
       width: max-content;
       font-size: 1.2rem;

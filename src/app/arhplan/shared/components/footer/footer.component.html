@@ -2,18 +2,40 @@
   <div class="main-container">
     <div class="footer__inner">
       <div class="footer__top">
-        <div class="footer__links">
-          <div class="footer__link">
-            <div class="icon">
-              <img src="../../../../../assets/img/gosuslugi.png" alt="Герб Орловской области">
-            </div>
-            <p>Государственные услуги</p>
+        <div class="footer__left">
+          <div class="footer__row">
+            <a class="footer__link"
+               href="https://www.gosuslugi.ru/structure/5700000010000112441"
+               target="_blank">
+              <div class="icon">
+                <img src="../../../../../assets/img/gosuslugi.png" alt="Иконска сайта 'Госуслуги'">
+              </div>
+              <p>Государственные услуги</p>
+            </a>
           </div>
-          <div class="footer__link">
-            <div class="icon">
-              <img src="../../../../../assets/img/coat-of-arms-of-the-region.png" alt="Герб Орловской области">
-            </div>
-            <p>Администрация города Орла</p>
+        </div>
+        <div class="footer__right">
+          <div class="footer__row footer__row_left">
+            <a href="https://orel-region.ru/"
+               class="footer__link"
+               target="_blank"
+            >
+              <div class="icon icon_government">
+                <img src="../../../../../assets/svg/coat-of-arms-of-Oryol.svg" alt="Герб Орловской области">
+              </div>
+              <p>Правительство Орловской области</p>
+            </a>
+          </div>
+          <div class="footer__row footer__row_right">
+            <a class="footer__link"
+               href="https://www.orel-adm.ru/ru/"
+               target="_blank"
+            >
+              <div class="icon">
+                <img src="../../../../../assets/img/coat-of-arms-of-the-region.png" alt="Герб Орловской области">
+              </div>
+              <p>Администрация города Орла</p>
+            </a>
           </div>
         </div>
       </div>
@@ -21,7 +43,7 @@
         <div class="footer__column">
           <div class="footer__row footer__row_description">
             <div class="footer__logo">
-              <img src="../../../../../assets/svg/coat-of-arms-of-Oryol-.svg">
+              <img src="../../../../../assets/svg/coat-of-arms-of-Oryol.svg" alt="Герб Орловской области">
               <h3>Бюджетное учреждение Орловской области «Архитектурно-планировочное управление Орловской области»</h3>
             </div>
             <button class="footer__btn">Обратная свзяь</button>
@@ -99,7 +121,8 @@
         </div>
       </div>
       <div class="footer__bottom">
-          <p class="footer__copyright">&copy; 2020-{{currentDate | date: 'y'}} БУ ОО «Архитектурно-планировочное управление Орловской области»</p>
+        <p class="footer__copyright">&copy; 2020-{{currentDate | date: 'y'}} БУ ОО «Архитектурно-планировочное
+          управление Орловской области»</p>
       </div>
     </div>
   </div>
