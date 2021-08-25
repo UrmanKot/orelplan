@@ -1,0 +1,51 @@
+.useful-links__title{
+  margin-bottom: 50px;
+}
+
+.useful-links__content {
+  width: 160px;
+  height: 180px;
+  background: url("../../../../../assets/img/useful-link-bg.png");
+  box-shadow: 0 25px 50px -21px rgb(0 0 0 / 30%);
+  background: #fff;
+  border-radius: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  svg {
+    width: 70px;
+    height: 70px;
+  }
+}
+
+.useful-links__caption {
+    text-align: center;
+  font-weight: 500;
+  margin-top: 30px;
+  height: 50px;
+}
+
+.useful-links__list {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  justify-content: center;
+  align-items: center;
+  grid-row-gap: 50px;
+}
+
+.useful-links__item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+  &_first {
+    grid-column-start: 2;
+  }
+
+  &_col-2 {
+    position: relative;
+    left: 105px;
+  }
+}

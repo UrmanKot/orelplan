@@ -1,0 +1,68 @@
+@import "../../../../../variables";
+
+.services__inner {
+  padding: 60px 0;
+}
+
+.services__title {
+  margin-bottom: 70px;
+}
+
+.services__list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  margin-bottom: 70px;
+}
+
+.services__item {
+  box-shadow: 0 25px 50px -21px rgb(0 0 0 / 30%);
+  text-shadow: 0 7px 6px rgb(129 88 61 / 7%);
+  padding: 35px 35px 25px;
+  border-radius: 20px;
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  flex-direction: column;
+  background: #fff;
+  border: 1px solid #ebebeb;
+
+  h3 {
+    font-weight: 600;
+    font-size: 0.9rem;
+    max-width: 300px;
+    margin-bottom: 30px;
+    text-align: right;
+    text-transform: uppercase;
+  }
+
+  .icon {
+    margin-bottom: 25px;
+
+    img {
+      width: 80px;
+    }
+  }
+}
+
+.service__bord {
+  width: 250px;
+  height: 2px;
+  background: $theme-color-primary;
+  margin-bottom: 25px;
+}
+
+.service__bottom {
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+
+  .arrow {
+    svg {
+      height: 30px;
+      width: 30px;
+      margin-left: 8px;
+    }
+  }
+}
+

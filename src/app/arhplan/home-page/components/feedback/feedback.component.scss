@@ -1,0 +1,40 @@
+@import "../../../../../variables";
+
+.feedback {
+  padding: 100px 0;
+}
+
+.feedback__column {
+  display: flex;
+  justify-content: space-between;
+}
+
+.feedback__title {
+  margin-bottom: 55px;
+}
+
+.feedback__text {
+  font-weight: 500;
+  font-size: 1.4rem;
+  margin-bottom: 45px;
+}
+
+.feedback__number {
+  font-size: 30px;
+  font-weight: 500;
+  color: $theme-color-primary;
+  margin-bottom: 10px;
+}
+
+.feedback__email {
+  font-size: 30px;
+  font-weight: 500;
+  color: $theme-color-primary;
+  margin-bottom: 50px;
+}
+
+.feedback__address {
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+

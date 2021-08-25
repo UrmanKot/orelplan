@@ -1,0 +1,50 @@
+@import "../../../../../variables";
+
+.map-contacts__card {
+  width: 400px;
+  height: 420px;
+  background: #fff;
+  position: absolute;
+  box-shadow: 0 25px 50px -21px rgb(0 0 0 / 30%);
+  top: 55px;
+  padding: 50px;
+  border: 1px solid #ebebeb;
+  border-radius: 10px;
+  font-size: 0.9rem;
+}
+
+.map-contacts__work-time {
+  margin-top: 20px;
+}
+
+.map-contacts {
+  position: relative;
+}
+
+.map-contacts__column {
+  font-weight: 500;
+
+  b {
+    font-weight: 900;
+  }
+}
+
+.map-contacts__title {
+  font-size: 1.5rem;
+  margin-bottom: 30px;
+  font-weight: 700;
+}
+
+.map-contacts__link {
+  color: $theme-color-primary;
+  display: block;
+}
+
+.map-contacts__row-1 {
+  margin-bottom: 30px;
+}
+
+.map-contacts__links {
+  margin-top: 30px;
+  font-size: 0.9rem;
+}

@@ -1,0 +1,34 @@
+@import "../../../../../variables";
+
+.covid__title {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto 50px;
+  text-align: center;
+}
+
+.covid__column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  p {
+    text-align: center;
+    font-weight: 500;
+    max-width: 800px;
+    font-size: 1.1rem;
+
+    span {
+      color: $theme-color-primary;
+      font-weight: 700;
+    }
+  }
+}
+
+.covid__illustration {
+  display: flex;
+  margin-bottom: 50px;
+  img {
+    width: 130px;
+  }
+}

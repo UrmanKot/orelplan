@@ -1,8 +1,10 @@
 .main-menu {
   display: grid;
-  grid-template-columns: repeat(6, 1fr);
+  grid-template-columns: repeat(7, 1fr);
 
   .main-menu__item {
+    position: relative;
+    z-index: 2;
 
     &:last-child {
       a {
@@ -53,15 +55,23 @@
     }
 
     .main-menu__dropdown {
+      position: absolute;
+      top: 50px;
+      width: 100%;
+      z-index: 2;
+
       .main-menu__dropdown-item {
         display: none;
 
         a {
           height: 50px;
           border-top: none;
-          border-right: 1px solid rgba(0,0,0,0.15) !important;
+          border-right: 1px solid rgba(0, 0, 0, 0.15) !important;
           font-weight: 500;
           font-size: 0.9rem;
+          background: #fff;
+          text-align: center;
+          line-height: 1.2;
         }
       }
     }

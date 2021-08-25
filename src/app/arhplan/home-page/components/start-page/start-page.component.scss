@@ -1,0 +1,68 @@
+@import '../../../../../variables';
+
+.start-page {
+  min-height: 600px;
+  width: 100%;
+  background-image: url("../../../../../assets/img/map.jpg");
+  background-position: center center;
+  background-attachment: fixed;
+  background-size: 100%;
+  position: relative;
+  color: $text-color;
+  display: flex;
+  flex-direction: column;
+
+  &::before {
+    content: '';
+    background: rgb(16,44,67);
+    background: linear-gradient(90deg, rgba(16,44,67,0.8491771708683473) 25%, rgba(16,44,67,0.7483368347338936) 91%);
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+
+  .start-page__inner {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+  }
+}
+
+.main-container {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.start-page__box {
+  flex: 1;
+  max-width: 720px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.start-page__title {
+  font-size: 52px;
+  font-weight: 900;
+  letter-spacing: 1.5px;
+  text-shadow: 0 7px 6px rgb(129 88 61 / 23%);
+}
+
+.start-page__buttons {
+  display: flex;
+  margin-top: 50px;
+
+  .btn {
+    width: 48%;
+    font-size: 1.1rem;
+
+    &:first-child {
+      margin-right: 4%;
+    }
+  }
+}

@@ -1,5 +1,6 @@
 // Импортируем ресэт стилей
 @import "assets/scss/reset";
+@import "variables";
 
 // Импортируем шрифт
 @import "assets/fonts/Lab Grotesque/stylesheet.css";
@@ -12,11 +13,51 @@ html, body {
 body {
   font-family: "Lab Grotesque", sans-serif;
   line-height: 1.4;
+  color: #2c2c2b;
+  background: #f5f9fa;
 }
 
 .main-container {
-  max-width: 1390px;
+  max-width: 1330px;
   width: 100%;
   padding: 0 30px;
   margin: 0 auto;
+}
+
+.btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 15px;
+  font: inherit;
+  font-weight: 500;
+  border-radius: 16px;
+  background-color: #fff;
+  color: $theme-color-primary;
+  box-shadow: 0 23px 16px rgb(0 36 65 / 20%);
+  cursor: pointer;
+
+  &-primary {
+    background-color: $theme-color-primary;
+    color: $text-color;
+  }
+}
+
+.title {
+  font-size: 48px;
+  font-weight: 900;
+  letter-spacing: 1px;
+  width: max-content;
+
+  span {
+    color: $theme-color-primary;
+  }
+}
+
+.subtitle {
+  display: block;
+  font-weight: 300;
+  font-size: 22px;
+  letter-spacing: 0.5px;
+  margin-bottom: 5px;
 }
