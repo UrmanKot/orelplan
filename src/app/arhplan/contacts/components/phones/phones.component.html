@@ -1,0 +1,48 @@
+<div class="main-container main-container_pad">
+  <div class="phones">
+    <div class="breadcrumbs">
+      <div class="breadcrumbs__item">
+        <a class="breadcrumbs__link">Главная</a>
+      </div>
+      <div class="breadcrumbs__separator">/</div>
+      <div class="breadcrumbs__item">
+        <a class="breadcrumbs__link">Контакты</a>
+      </div>
+      <div class="breadcrumbs__separator">/</div>
+      <div class="breadcrumbs__item breadcrumbs__item_current">
+        <a class="breadcrumbs__link">Телефоны</a>
+      </div>
+    </div>
+    <h2 class="title title_mb">
+      Телефоны
+    </h2>
+
+    <div class="phones__box">
+      <div class="phones__item" *ngFor="let department of departments">
+        <mat-expansion-panel
+          (opened)="panelOpenState = true"
+          (closed)="panelOpenState = false"
+        >
+          <mat-expansion-panel-header>
+            <mat-panel-title>
+              {{department.departmentName}}
+            </mat-panel-title>
+          </mat-expansion-panel-header>
+
+          <div class="phones__inner">
+            <div class="phones__column" *ngFor="let division of department.divisions">
+              <h3>{{division.name}}</h3>
+              <ul>
+                <li>{{division.employee}}</li>
+                <li *ngIf="division.extensionPhone">{{division.phone}}, доб. {{division.extensionPhone}}</li>
+                <li>{{division.email}}</li>
+                <li>Кабинет: {{division.cabinet}}</li>
+              </ul>
+            </div>
+          </div>
+
+        </mat-expansion-panel>
+      </div>
+    </div>
+  </div>
+</div>

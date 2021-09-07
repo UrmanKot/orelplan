@@ -1,0 +1,29 @@
+.contacts__box {
+  font-size: 1.1rem;
+  p {
+    margin-bottom: 10px;
+  }
+
+  padding-bottom: 20px;
+  border-bottom: 1px solid #c9c4c4;
+}
+
+.contacts__work-time {
+  margin-top: 30px;
+  line-height: 1.7;
+}
+
+.contacts__links {
+  padding-top: 30px;
+  display: flex;
+  flex-direction: column;
+  font-size: 1.1rem;
+
+  a {
+    margin-bottom: 10px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}

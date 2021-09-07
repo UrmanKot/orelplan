@@ -6,13 +6,23 @@
       </a>
     </li>
     <li class="main-menu__item">
-      <a href="#">
+      <a routerLink="about-us">
         <span>О нас</span>
       </a>
       <ul class="main-menu__dropdown drop-menu">
-        <li class="main-menu__dropdown-item"><a href="#">Структура</a></li>
-        <li class="main-menu__dropdown-item"><a href="#">Реквизиты</a></li>
+        <li class="main-menu__dropdown-item"><a routerLink="about-us/structure">Структура</a></li>
+        <li class="main-menu__dropdown-item"><a routerLink="about-us/requisites">Реквизиты</a></li>
       </ul>
+    </li>
+    <li class="main-menu__item">
+      <a href="#">
+        <span>Наши проекты</span>
+      </a>
+    </li>
+    <li class="main-menu__item">
+      <a routerLink="services">
+        <span>Услуги</span>
+      </a>
     </li>
     <li class="main-menu__item">
       <a href="#">
@@ -24,28 +34,17 @@
         <span>Документы</span>
       </a>
       <ul class="main-menu__dropdown drop-menu">
-        <li class="main-menu__dropdown-item"><a href="#">Нормативно-правовые акты</a></li>
-        <li class="main-menu__dropdown-item"><a href="#">Противодействие корупции</a></li>
+        <li class="main-menu__dropdown-item"><a routerLink="documents/normative-legal">Нормативно-правовые акты</a></li>
+        <li class="main-menu__dropdown-item"><a routerLink="documents/combating-corruption">Противодействие корупции</a></li>
       </ul>
     </li>
     <li class="main-menu__item">
-      <a href="#">
-        <span>Услуги</span>
-      </a>
-    </li>
-    <li class="main-menu__item">
-      <a href="#">
+      <a routerLink="contacts">
         <span>Контакты</span>
       </a>
       <ul class="main-menu__dropdown drop-menu">
-        <li class="main-menu__dropdown-item"><a href="#">Прием граждан</a></li>
-        <li class="main-menu__dropdown-item"><a href="#">Телефоны</a></li>
+        <li class="main-menu__dropdown-item"><a routerLink="contacts/phones">Телефоны</a></li>
       </ul>
-    </li>
-    <li class="main-menu__item">
-      <a href="#">
-        <span>Геопортал</span>
-      </a>
     </li>
   </ul>
 </nav>

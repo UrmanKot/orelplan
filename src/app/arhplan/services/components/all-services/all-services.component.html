@@ -1,0 +1,101 @@
+<div class="services">
+  <div class="main-container">
+    <div class="services__inner">
+      <div class="breadcrumbs" *ngIf="allServices">
+        <div class="breadcrumbs__item">
+          <a class="breadcrumbs__link">Главная</a>
+        </div>
+        <div class="breadcrumbs__separator">/</div>
+        <div class="breadcrumbs__item breadcrumbs__item_current">
+          <a class="breadcrumbs__link">Услуги</a>
+        </div>
+      </div>
+      <h2 class="services__title title title_big" [class.services__title_mb]="allServices">
+        <span *ngIf="!allServices">Наши</span>
+        <b *ngIf="allServices">Наши</b> услуги</h2>
+      <div class="services__list">
+        <div class="services__item" [routerLink]="!allServices ? 'services/changing-borders' : 'changing-borders'">
+          <div class="icon">
+            <img src="assets/svg/service-icon-plan.svg">
+          </div>
+          <h3>Выполнение работ по установлению или изменению границ объектов землеустройства</h3>
+          <div class="service__bord"></div>
+          <div class="service__bottom">
+            Подробнее
+            <span class="arrow">
+            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px"
+                 fill="#000000"><path d="M0 0h24v24H0z" fill="none"/><path
+              d="M16.01 11H4v2h12.01v3L20 12l-3.99-4z"/>
+            </svg>
+            </span>
+          </div>
+        </div>
+        <div class="services__item services__item_secondary" [routerLink]="!allServices ? 'services/land-use-rules' : 'land-use-rules'">
+          <div class="icon">
+            <img src="assets/svg/service-icon-build.svg">
+          </div>
+          <h3>Подготовка проектов правил землепользования и застройки населенных пунктов</h3>
+          <div class="service__bord"></div>
+          <div class="service__bottom">
+            Подробнее
+            <span class="arrow">
+            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px"
+                 fill="#000000"><path d="M0 0h24v24H0z" fill="none"/><path
+              d="M16.01 11H4v2h12.01v3L20 12l-3.99-4z"/>
+            </svg>
+            </span>
+          </div>
+        </div>
+        <div class="services__item" [routerLink]="!allServices ? 'services/surveying-territory' : 'surveying-territory'">
+          <div class="icon">
+            <img src="assets/svg/service-icon-arh.svg">
+          </div>
+          <h3>Подготовка проектов планировки территории и проектов межевания территории (ПП + ПМ)</h3>
+          <div class="service__bord"></div>
+          <div class="service__bottom">
+            Подробнее
+            <span class="arrow">
+            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px"
+                 fill="#000000"><path d="M0 0h24v24H0z" fill="none"/><path
+              d="M16.01 11H4v2h12.01v3L20 12l-3.99-4z"/>
+            </svg>
+            </span>
+          </div>
+        </div>
+        <div class="services__item services__item_engineer" routerLink="engineering-surveys" *ngIf="allServices">
+          <div class="icon">
+            <img src="assets/svg/service-icon-sketch.svg">
+          </div>
+          <h3>Выполнение <br>инженерно-геодезических изысканий</h3>
+          <div class="service__bord"></div>
+          <div class="service__bottom">
+            Подробнее
+            <span class="arrow">
+            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px"
+                 fill="#000000"><path d="M0 0h24v24H0z" fill="none"/><path
+              d="M16.01 11H4v2h12.01v3L20 12l-3.99-4z"/>
+            </svg>
+            </span>
+          </div>
+        </div>
+        <div class="services__item" *ngIf="allServices" routerLink="/services/construction">
+          <div class="icon">
+            <img src="assets/svg/service-icon-team.svg">
+          </div>
+          <h3>Подготовка проектов правил землепользования и застройки населенных пунктов</h3>
+          <div class="service__bord"></div>
+          <div class="service__bottom">
+            Подробнее
+            <span class="arrow">
+            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px"
+                 fill="#000000"><path d="M0 0h24v24H0z" fill="none"/><path
+              d="M16.01 11H4v2h12.01v3L20 12l-3.99-4z"/>
+            </svg>
+            </span>
+          </div>
+        </div>
+      </div>
+      <button *ngIf="!allServices" class="service__button btn btn-primary" routerLink="services">Смотреть все</button>
+    </div>
+  </div>
+</div>

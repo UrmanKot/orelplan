@@ -1,18 +1,21 @@
 @import "../../../../../variables";
 
-.services__inner {
-  padding: 60px 0;
-}
-
 .services__title {
   margin-bottom: 70px;
+
+  b {
+    font-weight: 900;
+  }
+
+  &_mb {
+    margin-bottom: 50px;
+  }
 }
 
 .services__list {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 30px;
-  margin-bottom: 70px;
 }
 
 .services__item {
@@ -43,6 +46,15 @@
       width: 80px;
     }
   }
+
+  &_engineer {
+    .icon {
+      img {
+        padding: 5px 0;
+        width: 70px;
+      }
+    }
+  }
 }
 
 .service__bord {
@@ -50,6 +62,7 @@
   height: 2px;
   background: $theme-color-primary;
   margin-bottom: 25px;
+  margin-top: auto;
 }
 
 .service__bottom {
@@ -66,3 +79,7 @@
   }
 }
 
+.service__button {
+  width: 300px;
+  margin: 70px auto 50px;
+}

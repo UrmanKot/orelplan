@@ -8,7 +8,7 @@
 
     &:last-child {
       a {
-        border-right: 1px solid #e8e8e8;
+        //border-right: 1px solid #e8e8e8;
       }
     }
 
@@ -41,13 +41,14 @@
       justify-content: center;
       align-items: center;
       flex-direction: column;
-      height: 50px;
+      height: 55px;
       font-weight: 600;
       cursor: unset;
-      border: 1px solid rgba(0, 0, 0, 0.15);
       border-right: none;
-      color: #000;
+      color: #fff;
       text-decoration: none;
+      //border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+      //border-top: 1px solid rgba(0, 0, 0, 0.15);
 
       &:hover {
         cursor: pointer;
@@ -56,7 +57,7 @@
 
     .main-menu__dropdown {
       position: absolute;
-      top: 50px;
+      top: 55px;
       width: 100%;
       z-index: 2;
 
@@ -64,12 +65,12 @@
         display: none;
 
         a {
-          height: 50px;
+          height: 55px;
           border-top: none;
           border-right: 1px solid rgba(0, 0, 0, 0.15) !important;
           font-weight: 500;
           font-size: 0.9rem;
-          background: #fff;
+          background: #000;
           text-align: center;
           line-height: 1.2;
         }

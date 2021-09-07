@@ -1,0 +1,68 @@
+@import "../../../../../variables";
+
+.phones__box {
+  border: 2px solid #f2f2f2;
+  border-radius: 3px;
+  background: #fff;
+}
+
+.phones__inner {
+  padding-top: 20px;
+  font-size: 0.95rem;
+  padding-bottom: 20px;
+}
+
+.phones__column {
+  margin-bottom: 30px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  h3 {
+    margin-bottom: 10px;
+    font-weight: 500;
+  }
+
+  ul {
+    li {
+      margin-bottom: 5px;
+      padding-left: 35px;
+      display: flex;
+      align-items: center;
+      position: relative;
+
+      &:before {
+        content: '';
+        width: 7px;
+        height: 7px;
+        position: absolute;
+        border-radius: 50%;
+        background: $theme-color-primary;
+        left: 17px;
+      }
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+}
+
+.phones__item {
+  border-bottom: 1px solid #f2f2f2;
+
+  &:last-child {
+    border-bottom: none;
+  }
+}
+
+.phones__info {
+  margin-bottom: 60px;
+  font-size: 1.1rem;
+  text-align: center;
+
+  b {
+    font-size: 1.3rem;
+  }
+}
