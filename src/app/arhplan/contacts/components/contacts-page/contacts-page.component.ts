@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {Title} from '@angular/platform-browser';
 
 @Component({
   selector: 'arh-contacts-page',
@@ -7,7 +8,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ContactsPageComponent implements OnInit {
 
-  constructor() { }
+  constructor(
+    private titleService: Title
+  ) {
+    this.titleService.setTitle(`Контакты - БУ ОО «Орелархплан»`)
+  }
 
   ngOnInit(): void {
   }

@@ -5,11 +5,13 @@
   .main-menu__item {
     position: relative;
     z-index: 2;
+    transition: all 0.2s;
 
-    &:last-child {
-      a {
-        //border-right: 1px solid #e8e8e8;
-      }
+    &_active {
+      //background: #495b69;
+      background: #3e4e5a;
+      transition: all 0.2s;
+      //background: #34414b;
     }
 
     &:hover {
@@ -70,8 +72,9 @@
           border-right: 1px solid rgba(0, 0, 0, 0.15) !important;
           font-weight: 500;
           font-size: 0.9rem;
-          background: #000;
+          background: #536878;
           text-align: center;
+          transition: all 0.2s;
           line-height: 1.2;
         }
       }
@@ -87,5 +90,30 @@
   100% {
     opacity: 1;
     transform: rotateX(0deg);
+  }
+}
+
+@media (hover: hover) {
+  .main-menu__item {
+    position: relative;
+    z-index: 2;
+
+    &_active {
+      &:hover {
+        background: #34414b !important;
+      }
+    }
+
+    &:hover {
+      background: #34414b !important;
+    }
+  }
+
+  .main-menu__dropdown-item {
+    &:hover {
+      a {
+        background: #34414b !important;
+      }
+    }
   }
 }

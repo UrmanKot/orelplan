@@ -43,6 +43,7 @@
   border-radius: 20px;
   margin-bottom: 30px;
   border: 1px solid #ebebeb;
+  cursor: pointer;
 
   &_gisogd {
     min-height: 650px;
@@ -85,6 +86,35 @@
       width: 60px;
       height: 60px;
       fill: $theme-color-primary;
+    }
+  }
+
+  .arrow {
+    transition: all 0.20s;
+    margin-top: -2px;
+    position: absolute;
+    svg {
+      height: 30px;
+      width: 30px;
+      margin-left: 8px;
+    }
+  }
+}
+
+@media (hover: hover) {
+  .activity__item {
+    &:hover {
+      .activity__bottom {
+        color: $theme-color-primary;
+
+      .arrow {
+        transform: translateX(5px);
+
+        svg {
+          fill: $theme-color-primary;
+        }
+      }
+      }
     }
   }
 }

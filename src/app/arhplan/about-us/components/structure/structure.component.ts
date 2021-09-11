@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {Title} from '@angular/platform-browser';
 
 @Component({
   selector: 'arh-structure',
@@ -7,7 +8,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class StructureComponent implements OnInit {
 
-  constructor() { }
+  constructor(
+    private titleService: Title
+  ) {
+    this.titleService.setTitle(`Структура - БУ ОО «Орелархплан»`)
+  }
 
   ngOnInit(): void {
   }

@@ -29,6 +29,7 @@
   flex-direction: column;
   background: #fff;
   border: 1px solid #ebebeb;
+  transition: all 0.20s;
 
   h3 {
     font-weight: 600;
@@ -41,9 +42,17 @@
 
   .icon {
     margin-bottom: 25px;
+    width: 80px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
 
-    img {
-      width: 80px;
+    svg {
+      width: 70px;
+      height: 70px;
+
+      fill: $theme-color-primary;
     }
   }
 
@@ -71,6 +80,9 @@
   align-items: center;
 
   .arrow {
+    position: relative;
+    transition: all 0.20s;
+    margin-top: 1px;
     svg {
       height: 30px;
       width: 30px;
@@ -82,4 +94,51 @@
 .service__button {
   width: 300px;
   margin: 70px auto 50px;
+}
+
+
+@media (hover: hover) {
+  .services__item {
+    &:hover {
+      .service__bottom {
+        color: $theme-color-primary;
+        .arrow {
+          transform: translateX(5px);
+
+          svg {
+            fill: $theme-color-primary;
+          }
+        }
+      }
+    }
+  }
+}
+
+.service__note {
+  margin-top: 70px;
+  background: #fff;
+  border: 1px solid #ebebeb;
+  box-shadow: 0 25px 50px -21px rgb(0 0 0 / 30%);
+  padding: 30px;
+  border-radius: 20px;
+
+  ul {
+    padding-left: 16px;
+
+    li {
+      margin-bottom: 15px;
+    }
+  }
+
+  h4 {
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+    //color: $theme-color-primary;
+  }
+
+  p {
+    margin-bottom: 15px;
+  }
 }

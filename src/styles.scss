@@ -49,10 +49,18 @@ a {
   color: $theme-color-primary;
   box-shadow: 0 23px 16px rgb(0 36 65 / 20%);
   cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.20s;
 
   &-primary {
     background-color: $theme-color-primary;
     color: $text-color;
+  }
+
+  &:active {
+    box-shadow: 0 17px 10px rgb(0 36 65 / 20%);
+    top: 1px;
   }
 }
 
@@ -140,12 +148,19 @@ a {
     width: 130px;
     font-size: 0.9rem;
     font-weight: 500;
+    transition: all 0.2s;
 
     span {
       display: flex;
       align-items: center;
       flex: 0 0 25px;
       margin-right: 3px;
+
+      svg {
+        width: 25px;
+        height: 25px;
+        transition: all 0.2s;
+      }
     }
 
     &_viewing {
@@ -178,6 +193,7 @@ a {
 
   .breadcrumbs__link {
     color: #a5b9ca;
+    transition: all 0.2s;
   }
 
   .breadcrumbs__separator {
@@ -199,19 +215,20 @@ a {
 
   &.phone__item {
 
-      .mat-expansion-panel {
-        border-top-left-radius: 15px !important;
-        border-top-right-radius: 15px !important;
-      }
+    .mat-expansion-panel {
+      border-top-left-radius: 15px !important;
+      border-top-right-radius: 15px !important;
+    }
 
   }
 
   .mat-expansion-panel {
     border-radius: 0;
     box-shadow: none !important;
+
     &.mat-expanded {
       mat-expansion-panel-header {
-        background: $theme-color-primary;
+        background: $theme-color-primary !important;
       }
 
       .mat-expansion-panel-header-title {
@@ -234,11 +251,11 @@ a {
     border-bottom: 1px solid #f2f2f2;
     border-radius: 0;
     height: auto !important;
-    font-family:  inherit !important;
+    font-family: inherit !important;
 
     &:hover {
-      background: #f2f2f2;
-      transition: 0.15s;
+      background: rgba(0, 0, 0, 0.07) !important;
+      transition: all 0.2s;
     }
 
     .mat-expansion-indicator {
@@ -277,6 +294,7 @@ a {
 
     .icon {
       margin-right: 20px;
+
       svg {
         fill: $theme-color-primary;
         width: 40px;
@@ -285,13 +303,17 @@ a {
     }
 
     &:hover {
-      background: #f2f2f2;
+      background: rgba(0, 0, 0, 0.07) !important;
     }
 
     &_current {
       background: $theme-color-primary !important;
       color: $text-color !important;
       cursor: default;
+
+      &:hover {
+        background: $theme-color-primary !important;
+      }
 
       .icon {
         svg {
@@ -341,7 +363,14 @@ a {
   margin-bottom: 20px !important;
 }
 
-.items-list  {
+.box-shadow {
+  &_hover {
+    transition: all 0.20s;
+    cursor: pointer;
+  }
+}
+
+.items-list {
   li {
     margin-bottom: 10px;
     padding-left: 24px;
@@ -360,6 +389,65 @@ a {
 
     &:last-child {
       margin-bottom: 0;
+    }
+  }
+}
+
+.link {
+  text-decoration: underline;
+  text-decoration-color: transparent;
+  transition: all 0.2s;
+
+  -webkit-text-decoration-color: transparent;
+  -moz-text-decoration-color: transparent;
+}
+
+@media (hover: hover) {
+  .btn {
+    &:hover {
+      background: $theme-color-primary;
+      color: $text-color;
+    }
+  }
+
+  .link {
+    &:hover {
+      color: $theme-color-secondary !important;
+      text-decoration-color: $theme-color-secondary;
+      -webkit-text-decoration-color: $theme-color-secondary;
+      -moz-text-decoration-color: $theme-color-secondary;
+    }
+  }
+
+  .btn-primary {
+    &:hover {
+      color: #fff;
+      background: $theme-color-secondary;
+      box-shadow: 0 28px 22px rgb(0 36 65 / 30%);
+    }
+  }
+
+  .breadcrumbs__link {
+    &:hover {
+      color: $theme-color-secondary;
+    }
+  }
+
+  .box-shadow {
+    &_hover {
+      &:hover {
+        box-shadow: 0 15px 50px 0 rgb(0 0 0 / 25%) !important;
+      }
+    }
+  }
+
+  .documents__link {
+    &:hover {
+      color: $theme-color-dark;
+
+      svg {
+        fill: $theme-color-dark;
+      }
     }
   }
 }

@@ -3,7 +3,7 @@
     <div class="services__inner">
       <div class="breadcrumbs" *ngIf="allServices">
         <div class="breadcrumbs__item">
-          <a class="breadcrumbs__link">Главная</a>
+          <a class="breadcrumbs__link" routerLink="/">Главная</a>
         </div>
         <div class="breadcrumbs__separator">/</div>
         <div class="breadcrumbs__item breadcrumbs__item_current">
@@ -14,14 +14,19 @@
         <span *ngIf="!allServices">Наши</span>
         <b *ngIf="allServices">Наши</b> услуги</h2>
       <div class="services__list">
-        <div class="services__item" [routerLink]="!allServices ? 'services/changing-borders' : 'changing-borders'">
+        <div class="services__item box-shadow_hover"
+             [routerLink]="!allServices ? 'services/changing-borders' : 'changing-borders'">
           <div class="icon">
-            <img src="assets/img/svg/service-icon-plan.svg">
+            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#000000">
+              <path d="M0 0h24v24H0z" fill="none"/>
+              <path
+                d="M12 10.9c-.61 0-1.1.49-1.1 1.1s.49 1.1 1.1 1.1c.61 0 1.1-.49 1.1-1.1s-.49-1.1-1.1-1.1zM12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm2.19 12.19L6 18l3.81-8.19L18 6l-3.81 8.19z"/>
+            </svg>
           </div>
           <h3>Выполнение работ по установлению или изменению границ объектов землеустройства</h3>
           <div class="service__bord"></div>
           <div class="service__bottom">
-            Подробнее
+            <span class="service__text">Подробнее</span>
             <span class="arrow">
             <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px"
                  fill="#000000"><path d="M0 0h24v24H0z" fill="none"/><path
@@ -30,9 +35,17 @@
             </span>
           </div>
         </div>
-        <div class="services__item services__item_secondary" [routerLink]="!allServices ? 'services/land-use-rules' : 'land-use-rules'">
+        <div class="services__item box-shadow_hover services__item_secondary"
+             [routerLink]="!allServices ? 'services/land-use-rules' : 'land-use-rules'">
           <div class="icon">
-            <img src="assets/img/svg/service-icon-build.svg">
+            <svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" height="24px" viewBox="0 0 24 24"
+                 width="24px" fill="#000000">
+              <g>
+                <rect fill="none" height="24" width="24"/>
+                <path
+                  d="M17,12c-2.76,0-5,2.24-5,5s2.24,5,5,5c2.76,0,5-2.24,5-5S19.76,12,17,12z M18.65,19.35l-2.15-2.15V14h1v2.79l1.85,1.85 L18.65,19.35z M18,3h-3.18C14.4,1.84,13.3,1,12,1S9.6,1.84,9.18,3H6C4.9,3,4,3.9,4,5v15c0,1.1,0.9,2,2,2h6.11 c-0.59-0.57-1.07-1.25-1.42-2H6V5h2v3h8V5h2v5.08c0.71,0.1,1.38,0.31,2,0.6V5C20,3.9,19.1,3,18,3z M12,5c-0.55,0-1-0.45-1-1 c0-0.55,0.45-1,1-1c0.55,0,1,0.45,1,1C13,4.55,12.55,5,12,5z"/>
+              </g>
+            </svg>
           </div>
           <h3>Подготовка проектов правил землепользования и застройки населенных пунктов</h3>
           <div class="service__bord"></div>
@@ -46,9 +59,14 @@
             </span>
           </div>
         </div>
-        <div class="services__item" [routerLink]="!allServices ? 'services/surveying-territory' : 'surveying-territory'">
+        <div class="services__item box-shadow_hover"
+             [routerLink]="!allServices ? 'services/surveying-territory' : 'surveying-territory'">
           <div class="icon">
-            <img src="assets/img/svg/service-icon-arh.svg">
+            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#000000">
+              <path d="M0 0h24v24H0z" fill="none"/>
+              <path
+                d="M11.99 18.54l-7.37-5.73L3 14.07l9 7 9-7-1.63-1.27-7.38 5.74zM12 16l7.36-5.73L21 9l-9-7-9 7 1.63 1.27L12 16z"/>
+            </svg>
           </div>
           <h3>Подготовка проектов планировки территории и проектов межевания территории (ПП + ПМ)</h3>
           <div class="service__bord"></div>
@@ -62,9 +80,23 @@
             </span>
           </div>
         </div>
-        <div class="services__item services__item_engineer" routerLink="engineering-surveys" *ngIf="allServices">
+        <div class="services__item box-shadow_hover services__item_engineer" routerLink="engineering-surveys"
+             *ngIf="allServices">
           <div class="icon">
-            <img src="assets/img/svg/service-icon-sketch.svg">
+            <svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" height="24px" viewBox="0 0 24 24"
+                 width="24px" fill="#000000">
+              <g>
+                <rect fill="none" height="24" width="24"/>
+              </g>
+              <g>
+                <g>
+                  <path d="M6.36,18.78L6.61,21l1.62-1.54l2.77-7.6c-0.68-0.17-1.28-0.51-1.77-0.98L6.36,18.78z"/>
+                  <path d="M14.77,10.88c-0.49,0.47-1.1,0.81-1.77,0.98l2.77,7.6L17.39,21l0.26-2.22L14.77,10.88z"/>
+                  <path
+                    d="M15,8c0-1.3-0.84-2.4-2-2.82V3h-2v2.18C9.84,5.6,9,6.7,9,8c0,1.66,1.34,3,3,3S15,9.66,15,8z M12,9c-0.55,0-1-0.45-1-1 c0-0.55,0.45-1,1-1s1,0.45,1,1C13,8.55,12.55,9,12,9z"/>
+                </g>
+              </g>
+            </svg>
           </div>
           <h3>Выполнение <br>инженерно-геодезических изысканий</h3>
           <div class="service__bord"></div>
@@ -78,9 +110,20 @@
             </span>
           </div>
         </div>
-        <div class="services__item" *ngIf="allServices" routerLink="/services/construction">
+        <div class="services__item box-shadow_hover" *ngIf="allServices" routerLink="/services/construction">
           <div class="icon">
-            <img src="assets/img/svg/service-icon-team.svg">
+            <svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" height="24px" viewBox="0 0 24 24"
+                 width="24px" fill="#000000">
+              <g>
+                <path d="M0,0h24v24H0V0z" fill="none"/>
+              </g>
+              <g>
+                <g>
+                  <polygon points="1,11 1,21 6,21 6,15 10,15 10,21 15,21 15,11 8,6"/>
+                  <path d="M10,3v1.97l7,5V11h2v2h-2v2h2v2h-2v4h6V3H10z M19,9h-2V7h2V9z"/>
+                </g>
+              </g>
+            </svg>
           </div>
           <h3>Подготовка проектов правил землепользования и застройки населенных пунктов</h3>
           <div class="service__bord"></div>
@@ -96,6 +139,29 @@
         </div>
       </div>
       <button *ngIf="!allServices" class="service__button btn btn-primary" routerLink="services">Смотреть все</button>
+      <div class="service__note" *ngIf="allServices">
+        <h4>Примечание:</h4>
+        <div>
+          <p>1. Расчет стоимости осуществляется на основании:</p>
+          <ul class="items-list">
+            <li>
+              Сборник цен и общественно необходимых затрат труда (ОНЗТ) на изготовление проектной иизыскательской
+              продукции. землеустройства, земельного кадастра и мониторинга земель (г. Москва, 1996 г.);
+            </li>
+            <li>
+              Справочник базовых цен на инженерные изыскания для строительства. Инженерногеодезические изыскания (цены
+              приведены к базисному уровню на 01.01.2001 г.);
+            </li>
+            <li>
+              Справочник базовых цен на инженерно-геологические и инженерно-экологические изыскания для строительства
+              (цены приведены к базисному уровню на 01.01.1991 года).
+            </li>
+          </ul>
+          <p>2. Ко всем разделам могут быть применены повышающие коэффициенты объема и коэффициенты сложности.</p>
+          <p class="mb-0">3. Срок выполнения зависит от объема и условий выполнения работ, удаленности участка (для работ, требующих
+            выезда на объект) и определяются индивидуально.</p>
+        </div>
+      </div>
     </div>
   </div>
 </div>

@@ -18,6 +18,7 @@ import { FeedbackFormComponent } from './shared/components/feedback-form/feedbac
 import {DocumentsModule} from './documents/documents.module';
 import { MainLayoutContainerComponent } from './layouts/main-layout-container/main-layout-container.component';
 import {ServicesModule} from './services/services.module';
+import { PrivacyPolicyComponent } from './shared/components/privacy-policy/privacy-policy.component';
 
 
 @NgModule({
@@ -36,6 +37,7 @@ import {ServicesModule} from './services/services.module';
         FeedbackComponent,
         FeedbackFormComponent,
         MainLayoutContainerComponent,
+        PrivacyPolicyComponent,
     ],
     exports: [
         MapContactsComponent

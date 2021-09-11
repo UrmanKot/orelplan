@@ -1,4 +1,5 @@
 import {Component, OnInit} from '@angular/core';
+import {Title} from '@angular/platform-browser';
 
 export class Department {
   id: number;
@@ -26,7 +27,10 @@ export class PhonesComponent implements OnInit {
   panelOpenState = false;
   departments: Department[];
 
-  constructor() {
+  constructor(
+    private titleService: Title
+  ) {
+    this.titleService.setTitle(`Телефоны - БУ ОО «Орелархплан»`)
   }
 
   ngOnInit(): void {

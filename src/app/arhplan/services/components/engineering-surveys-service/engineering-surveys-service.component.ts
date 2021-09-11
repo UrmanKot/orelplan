@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {Title} from '@angular/platform-browser';
 
 @Component({
   selector: 'arh-engineering-surveys-service',
@@ -7,7 +8,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class EngineeringSurveysServiceComponent implements OnInit {
 
-  constructor() { }
+  constructor(
+    private titleService: Title
+  ) {
+    this.titleService.setTitle(`Выполнение инженерно-геодезических изысканий - БУ ОО «Орелархплан»`)
+  }
 
   ngOnInit(): void {
   }

@@ -1,5 +1,8 @@
+@import "../../../../../variables";
+
 .contacts__box {
   font-size: 1.1rem;
+
   p {
     margin-bottom: 10px;
   }
@@ -21,9 +24,23 @@
 
   a {
     margin-bottom: 10px;
+    transition: all 0.2s;
+    width: max-content;
+    border-bottom: 2px solid transparent;
 
     &:last-child {
       margin-bottom: 0;
+    }
+  }
+}
+
+@media (hover: hover) {
+  .contacts__links {
+    a {
+      &:hover {
+          color: $theme-color-dark;
+          border-bottom: 2px solid $theme-color-dark;
+      }
     }
   }
 }

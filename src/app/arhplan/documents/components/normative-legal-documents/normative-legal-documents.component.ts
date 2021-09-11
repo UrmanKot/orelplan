@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {Title} from '@angular/platform-browser';
 
 @Component({
   selector: 'arh-normative-legal-documents',
@@ -7,7 +8,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NormativeLegalDocumentsComponent implements OnInit {
 
-  constructor() { }
+  constructor(
+    private titleService: Title
+  ) {
+    this.titleService.setTitle(`Нормативно-правовые документы - БУ ОО «Орелархплан»`)
+  }
 
   ngOnInit(): void {
   }

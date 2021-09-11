@@ -1,4 +1,19 @@
+@import "../../../../../variables";
+
 .normative-legal-documents__top {
   margin-bottom: 50px;
   width: max-content;
+}
+
+.normative-legal-documents__link {
+  transition: all 0.2s;
+}
+
+@media (hover: hover) {
+  .normative-legal-documents__link {
+    &:hover {
+      color: $theme-color-dark;
+      border-bottom: 2px solid $theme-color-dark;
+    }
+  }
 }

@@ -1,4 +1,6 @@
-.useful-links__title{
+@import "../../../../../variables";
+
+.useful-links__title {
   margin-bottom: 50px;
 }
 
@@ -6,12 +8,13 @@
   width: 160px;
   height: 180px;
   background: url("../../../../../assets/img/useful-link-bg.png");
-  box-shadow: 0 25px 50px -21px rgb(0 0 0 / 30%);
+  box-shadow: 0 25px 50px -21px rgb(0 0 0 / 20%);
   background: #fff;
   border-radius: 50px;
   display: flex;
   align-items: center;
   justify-content: center;
+  transition: all 0.20s;
 
   svg {
     width: 70px;
@@ -20,7 +23,7 @@
 }
 
 .useful-links__caption {
-    text-align: center;
+  text-align: center;
   font-weight: 500;
   margin-top: 30px;
   height: 50px;
@@ -38,7 +41,19 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  flex-direction: column;
+
+  img {
+    pointer-events: none;
+  }
+
+  a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: $text-color-dark;
+    transition: all 0.20s;
+  }
 
   &_first {
     grid-column-start: 2;
@@ -49,3 +64,19 @@
     left: 105px;
   }
 }
+
+
+@media (hover: hover) {
+  .useful-links__item {
+    &:hover {
+      .useful-links__content {
+        box-shadow: 0 15px 50px 0 rgb(0 0 0 / 25%) !important;
+      }
+
+      a {
+        color: $theme-color-primary;
+      }
+    }
+  }
+}
+
