@@ -1,0 +1,55 @@
+<form class="news-form" [formGroup]="form" (ngSubmit)="submit()">
+  <div class="news-header">
+    <h1 class="title">Создание новости</h1>
+    <button type="submit" class="btn btn-primary" [disabled]="form.invalid">Создать новость</button>
+  </div>
+
+  <div *ngIf="progressValue | async as val">
+    <progress type="warning" [value]="val" style="height: 7mm; width: 50%" max="100"></progress>
+    <br/>
+    <span *ngIf="val < 100"
+          style="color:rgb(255, 60, 0); font-size: 17px; font-weight: 410;">
+      {{ val | number}}% </span>
+    <span *ngIf="val == 100"
+          style="color:rgb(1, 153, 34);  font-size: 17px; font-weight: 410;">Completed !</span>
+  </div>
+
+  <div class="card card_mb">
+    <div class="form-control" [class.invalid]="form.get('title')?.touched && form.get('title')?.invalid">
+      <label for="title">Название новости:</label>
+      <input id="title" type="text" formControlName="title">
+      <div class="validation" *ngIf="form.get('title')?.touched && form.get('title')?.invalid">
+        <small *ngIf="form.get('title')?.errors?.required">
+          Введите название новости
+        </small>
+      </div>
+    </div>
+    <div class="card-content">
+      <div class="card-content__left">
+        <label>Изображение новости</label>
+        <div class="image">
+          <img [src]="previewImageSrc || 'https://imgholder.ru/250x170/8493a8/adb9ca&text=IMAGE+HOLDER&font=kelson'"
+               alt="Preview Image"/>
+          <input class="file" type="file" name="file" (input)="selectFile($event)" accept=".jpeg,.jpg,.png,.svg"/>
+        </div>
+      </div>
+      <div class="form-control preview mb-0"
+           [class.invalid]="form.get('previewText')?.touched && form.get('previewText')?.invalid">
+        <label for="previewText">Превью новости:</label>
+        <textarea id="previewText" type="text" formControlName="previewText"></textarea>
+        <div class="validation" *ngIf="form.get('previewText')?.touched && form.get('previewText')?.invalid">
+          <small *ngIf="form.get('previewText')?.errors?.required">
+            Введите превью новости
+          </small>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="card card_mb">
+    <div class="form-control mb-0">
+      <label>Контент новости:</label>
+      <quill-editor formControlName="text"></quill-editor>
+    </div>
+  </div>
+</form>

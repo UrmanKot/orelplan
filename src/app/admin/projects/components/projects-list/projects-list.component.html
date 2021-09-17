@@ -1,0 +1,18 @@
+<div class="project-listing">
+  <div class="project-list__header">
+    <h1 class="title">Список проектов</h1>
+    <button routerLink="create" class="btn btn-primary">Создать проект</button>
+  </div>
+
+  <ul class="projects__list" *ngIf="!isLoading">
+    <li class="projects__item box-shadow_hover" *ngFor="let project of projects" [routerLink]="'edit/' + project.id">
+      <div class="projects__box" [style.background-image]="'url(' + project.uri + ')'">
+        <div class="hover">
+          <p>{{project.text}}</p>
+        </div>
+      </div>
+  </ul>
+  <div class="preloader-list" *ngIf="isLoading">
+    <div class="skeleton-box skeleton-box_news" *ngFor="let item of [].constructor(6)"></div>
+  </div>
+</div>

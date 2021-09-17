@@ -1,0 +1,27 @@
+<nav class="navbar bg-primary">
+  <div class="alert-wrap">
+    <arh-alert></arh-alert>
+  </div>
+  <h1>
+    <a class="text" routerLink="/">Панель администратора</a>
+  </h1>
+
+  <ul *ngIf="authService.isAuthentificated()">
+    <li routerLinkActive="active">
+      <a routerLink="/arh-admin/dashboard">Главная</a>
+    </li>
+    <li routerLinkActive="active">
+      <a routerLink="/arh-admin/news">Новости</a>
+    </li>
+    <li routerLinkActive="active">
+      <a routerLink="/arh-admin/projects">Проекты</a>
+    </li>
+    <li>
+      <a href="#" (click)="logout($event)">Выйти</a>
+    </li>
+  </ul>
+</nav>
+
+<div class="admin-container admin-container_pad">
+  <router-outlet></router-outlet>
+</div>

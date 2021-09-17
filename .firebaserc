@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "orelarhplan": {
+      "hosting": {
+        "orelarhplan": [
+          "orelarhplan"
+        ]
+      }
+    }
+  }
+}

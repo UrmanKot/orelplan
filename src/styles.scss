@@ -5,9 +5,15 @@
 // Импортируем шрифт
 @import "assets/fonts/Lab Grotesque/stylesheet.css";
 
+@import "~quill/dist/quill.snow.css";
+
 html, body {
   height: 100%;
   font-size: 18px;
+}
+
+img {
+  pointer-events: none;
 }
 
 body {
@@ -24,7 +30,7 @@ body {
   margin: 0 auto;
 
   &_pad {
-    padding: 50px 30px 80px;
+    padding: 40px 30px 80px;
   }
 }
 
@@ -55,6 +61,11 @@ a {
 
   &-primary {
     background-color: $theme-color-primary;
+    color: $text-color;
+  }
+
+  &-danger {
+    background: $theme-color-danger;
     color: $text-color;
   }
 
@@ -359,6 +370,10 @@ a {
   margin-bottom: 0 !important;
 }
 
+.p-0 {
+  padding: 0 !important;
+}
+
 .mb-20 {
   margin-bottom: 20px !important;
 }
@@ -402,6 +417,30 @@ a {
   -moz-text-decoration-color: transparent;
 }
 
+.ql-editor {
+  font: inherit;
+  font-size: 1rem;
+  padding-left: 0;
+  padding-right: 0;
+  font-family: "Lab Grotesque", sans-serif !important;
+  line-height: 1.4;
+  padding-top: 25px;
+
+  p, span, b, strong {
+    color: #2c2c2b !important;
+  }
+
+  a {
+    color: $theme-color-primary;
+    text-decoration: underline;
+    text-decoration-color: transparent;
+    transition: all 0.2s;
+    -webkit-text-decoration-color: transparent;
+    -moz-text-decoration-color: transparent;
+  }
+}
+
+
 @media (hover: hover) {
   .btn {
     &:hover {
@@ -424,6 +463,13 @@ a {
       color: #fff;
       background: $theme-color-secondary;
       box-shadow: 0 28px 22px rgb(0 36 65 / 30%);
+    }
+  }
+
+
+  .btn-danger {
+    &:hover {
+      background: #c82333;
     }
   }
 
@@ -450,4 +496,105 @@ a {
       }
     }
   }
+
+  .ql-editor {
+    a {
+      &:hover {
+        color: $theme-color-secondary !important;
+        text-decoration-color: $theme-color-secondary;
+        -webkit-text-decoration-color: $theme-color-secondary;
+        -moz-text-decoration-color: $theme-color-secondary;
+      }
+    }
+  }
 }
+
+
+.news-form {
+  .ql-editor {
+    padding: 1rem !important;
+  }
+}
+
+.skeleton-box {
+  display: inline-block;
+  position: relative;
+  overflow: hidden;
+  background-color: rgba(221, 219, 221, 0.9);
+  height: 55px;
+  margin-bottom: 5px;
+  width: 100%;
+  border-radius: 20px;
+  border: 1px solid #ebebeb;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  &_news {
+    height: 238px;
+    margin-bottom: 40px;
+  }
+
+  &::after {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    transform: translateX(-100%);
+    background-image: linear-gradient(
+        90deg,
+        rgba(#fff, 0) 0,
+        rgba(#fff, 0.2) 20%,
+        rgba(#fff, 0.5) 60%,
+        rgba(#fff, 0)
+    );
+    animation: shimmer 1.2s infinite;
+    content: '';
+  }
+
+  @keyframes shimmer {
+    100% {
+      transform: translateX(100%);
+    }
+  }
+}
+
+.alert-wrap {
+  position: fixed;
+  bottom: 50px;
+  right: 50px;
+  min-width: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.1rem;
+  color: $text-color;
+  border-radius: 5px;
+  font-weight: 500;
+  background: #28a745;
+
+  .alert {
+    margin-bottom: 0;
+    padding: 10px 20px;
+  }
+
+  p {
+    margin-bottom: 0;
+  }
+}
+
+arh-login-page {
+  min-height: 100%;
+}
+
+.view-project {
+  .mat-dialog-container {
+    position: relative;
+    overflow: inherit;
+  }
+}
+
+
+@import "app/arhplan/news/news";

@@ -1,0 +1,23 @@
+.news-list__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.news-list__description {
+  .news-list__caption {
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+  }
+
+  p {
+    font-size: 0.9rem;
+    max-height: 66px;
+    min-height: 66px;
+  }
+}
+
+.btn {
+  padding: 10px 35px;
+}

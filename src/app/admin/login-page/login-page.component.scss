@@ -1,0 +1,65 @@
+@import "../../../variables";
+
+.card {
+  background: #fff;
+  box-shadow: 0 25px 50px -21px rgb(0 0 0 / 30%);
+  border: 1px solid #ebebeb;
+  padding: 35px 35px 25px;
+  border-radius: 20px;
+  max-width: 500px;
+  margin: 100px auto 0;
+}
+
+.login-page {
+  min-height: 100%;
+}
+
+h2 {
+  font-weight: 700;
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+
+.form-control {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+
+  label {
+    margin-bottom: 5px;
+  }
+
+  input {
+    border-radius: 5px;
+    border: 1px solid $theme-color-primary;
+    padding: 10px 15px;
+  }
+}
+
+.invalid {
+  input,
+  textarea {
+    border: 1px solid crimson;
+  }
+}
+
+.validation {
+  small {
+    font-size: 0.7rem;
+    font-weight: 500;
+    color: crimson;
+  }
+}
+
+.btn {
+  width: 200px;
+  margin-left: auto;
+  box-shadow: none;
+  margin-top: 30px;
+}
+
+.alert-info {
+  margin-bottom: 20px;
+  color: crimson;
+  font-weight: 500;
+}

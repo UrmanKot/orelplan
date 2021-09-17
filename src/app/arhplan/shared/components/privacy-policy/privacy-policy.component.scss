@@ -1,10 +1,37 @@
-//.privacy-policy {
-//  display: flex;
-//  align-items: c;
-//  width: 100%;
-//  h1 {
-//    font-size: 4rem;
-//    line-height: 1.1;
-//    text-align: center;
-//  }
-//}
+.privacy-policy {
+  line-height: 1.5;
+  h3 {
+    font-weight: 700;
+    font-size: 1.1rem;
+    margin-bottom: 30px;
+  }
+
+  p {
+    margin-bottom: 30px;
+  }
+
+  ul {
+
+    li {
+      margin-bottom: 15px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  .list-p {
+    li {
+      margin-bottom: 25px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  .point {
+    margin-bottom: 30px;
+  }
+}

@@ -8,10 +8,8 @@ import { HomePageComponent } from './home-page/home-page.component';
 import { NavigationComponent } from './shared/components/navigation/navigation.component';
 import { FooterComponent } from './shared/components/footer/footer.component';
 import { StartPageComponent } from './home-page/components/start-page/start-page.component';
-import { AreaActivityComponent } from './home-page/components/area-activity/area-activity.component';
 import { CovidComponent } from './home-page/components/covid/covid.component';
 import { UsefulLinksComponent } from './home-page/components/useful-links/useful-links.component';
-import { NewsListComponent } from './home-page/components/news-list/news-list.component';
 import { MapContactsComponent } from './home-page/components/map-contacts/map-contacts.component';
 import { FeedbackComponent } from './home-page/components/feedback/feedback.component';
 import { FeedbackFormComponent } from './shared/components/feedback-form/feedback-form.component';
@@ -19,6 +17,8 @@ import {DocumentsModule} from './documents/documents.module';
 import { MainLayoutContainerComponent } from './layouts/main-layout-container/main-layout-container.component';
 import {ServicesModule} from './services/services.module';
 import { PrivacyPolicyComponent } from './shared/components/privacy-policy/privacy-policy.component';
+import {NewsModule} from "./news/news.module";
+import {ActivityModule} from "./activity/activity.module";
 
 
 @NgModule({
@@ -29,10 +29,8 @@ import { PrivacyPolicyComponent } from './shared/components/privacy-policy/priva
         NavigationComponent,
         FooterComponent,
         StartPageComponent,
-        AreaActivityComponent,
         CovidComponent,
         UsefulLinksComponent,
-        NewsListComponent,
         MapContactsComponent,
         FeedbackComponent,
         FeedbackFormComponent,
@@ -42,11 +40,13 @@ import { PrivacyPolicyComponent } from './shared/components/privacy-policy/priva
     exports: [
         MapContactsComponent
     ],
-    imports: [
-        CommonModule,
-        ArhplanRoutingModule,
-        DocumentsModule,
-        ServicesModule,
-    ]
+  imports: [
+    CommonModule,
+    ArhplanRoutingModule,
+    DocumentsModule,
+    ServicesModule,
+    NewsModule,
+    ActivityModule,
+  ]
 })
 export class ArhplanModule { }

@@ -1,0 +1,29 @@
+<div class="viewing-news">
+  <div class="breadcrumbs">
+    <div class="breadcrumbs__item">
+      <a class="breadcrumbs__link" routerLink="/">Главная</a>
+    </div>
+    <div class="breadcrumbs__separator">/</div>
+    <div class="breadcrumbs__item">
+      <a class="breadcrumbs__link" routerLink="/news">Новости</a>
+    </div>
+  </div>
+
+  <div class="skeleton-box" *ngIf="!news"></div>
+
+  <div *ngIf="news" class="news-content">
+    <h2 class="title title_mb">
+      {{news.title}}
+    </h2>
+
+    <div class="viewing-news__text">
+      {{news.previewText}}
+    </div>
+
+    <div>
+      <quill-view-html [content]="news.text"></quill-view-html>
+    </div>
+  </div>
+</div>
+
+

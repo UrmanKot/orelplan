@@ -1,1 +1,25 @@
-<p>projects-page works!</p>
+<div class="projects">
+  <div class="projects__inner">
+    <div class="breadcrumbs">
+      <div class="breadcrumbs__item">
+        <a class="breadcrumbs__link" routerLink="/">Главная</a>
+      </div>
+      <div class="breadcrumbs__separator">/</div>
+      <div class="breadcrumbs__item breadcrumbs__item_current">
+        <a class="breadcrumbs__link">Наши проекты</a>
+      </div>
+    </div>
+    <h2 class="projects__title title title_mb">Наши проекты</h2>
+    <ul class="projects__list" *ngIf="!isLoading">
+      <li class="projects__item box-shadow_hover" *ngFor="let project of projects" (click)="openProject(project)">
+        <div class="projects__box" [style.background-image]="'url(' + project.uri + ')'">
+          <div class="hover">
+            <p>{{project.text}}</p>
+          </div>
+        </div>
+    </ul>
+    <div class="preloader-list" *ngIf="isLoading">
+      <div class="skeleton-box skeleton-box_news" *ngFor="let item of [].constructor(6)"></div>
+    </div>
+  </div>
+</div>

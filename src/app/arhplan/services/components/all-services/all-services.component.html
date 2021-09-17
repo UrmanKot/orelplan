@@ -1,5 +1,5 @@
 <div class="services">
-  <div class="main-container">
+  <div class="main-container" [class.p-0]="allServices">
     <div class="services__inner">
       <div class="breadcrumbs" *ngIf="allServices">
         <div class="breadcrumbs__item">
@@ -10,9 +10,12 @@
           <a class="breadcrumbs__link">Услуги</a>
         </div>
       </div>
-      <h2 class="services__title title title_big" [class.services__title_mb]="allServices">
-        <span *ngIf="!allServices">Наши</span>
-        <b *ngIf="allServices">Наши</b> услуги</h2>
+      <h2 class="services__title title" *ngIf="allServices" [class.services__title_mb]="allServices">
+        Наши услуги
+      </h2>
+      <h2 *ngIf="!allServices" class="services__title title title_big" [class.services__title_mb]="allServices">
+        <span>Наши</span> услуги
+      </h2>
       <div class="services__list">
         <div class="services__item box-shadow_hover"
              [routerLink]="!allServices ? 'services/changing-borders' : 'changing-borders'">

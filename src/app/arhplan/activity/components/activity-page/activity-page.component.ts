@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
+import {Title} from "@angular/platform-browser";
 
 @Component({
   selector: 'arh-activity-page',
@@ -7,7 +8,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ActivityPageComponent implements OnInit {
 
-  constructor() { }
+  @Input() isStartPage = false;
+
+  constructor(
+    private titleService: Title
+  ) {
+    this.titleService.setTitle(`Деятельность - БУ ОО «Орелархплан»`)
+  }
 
   ngOnInit(): void {
   }

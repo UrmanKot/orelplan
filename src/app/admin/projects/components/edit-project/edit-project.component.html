@@ -1,0 +1,40 @@
+<form class="news-form" [formGroup]="form" (ngSubmit)="submit()">
+  <div class="news-header">
+    <h1 class="title">Редактирование проекта</h1>
+    <button type="submit" class="btn btn-primary" [disabled]="form.invalid">Сохранить проект</button>
+  </div>
+
+  <div *ngIf="progressValue | async as val">
+    <progress type="warning" [value]="val" style="height: 7mm; width: 50%" max="100"></progress>
+    <br/>
+    <span *ngIf="val < 100"
+          style="color:rgb(255, 60, 0); font-size: 17px; font-weight: 410;">
+      {{ val | number}}% </span>
+    <span *ngIf="val == 100"
+          style="color:rgb(1, 153, 34);  font-size: 17px; font-weight: 410;">Completed !</span>
+  </div>
+
+  <div class="card">
+    <div class="card-content">
+      <div class="card-content__left">
+        <label>Изображение проекта</label>
+        <div class="image">
+          <img [src]="previewImageSrc || project?.uri"
+               alt="Preview Image"/>
+          <input class="file" type="file" name="file" (input)="selectFile($event)" accept=".jpeg,.jpg,.png,.svg"/>
+        </div>
+      </div>
+      <div class="form-control preview mb-0"
+           [class.invalid]="form.get('text')?.touched && form.get('text')?.invalid">
+        <label for="previewText">Текст проекта:</label>
+        <textarea id="previewText" type="text" formControlName="text"></textarea>
+        <div class="validation" *ngIf="form.get('text')?.touched && form.get('text')?.invalid">
+          <small *ngIf="form.get('text')?.errors?.required">
+            Введите текст проекта
+          </small>
+        </div>
+      </div>
+    </div>
+  </div>
+  <button type="button" class="btn btn-danger" (click)="deleteProject()">Удалить проект</button>
+</form>
