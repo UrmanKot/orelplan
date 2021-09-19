@@ -19,6 +19,9 @@ import {ServicesModule} from './services/services.module';
 import { PrivacyPolicyComponent } from './shared/components/privacy-policy/privacy-policy.component';
 import {NewsModule} from "./news/news.module";
 import {ActivityModule} from "./activity/activity.module";
+import {ReactiveFormsModule} from "@angular/forms";
+import { FeedbackFormModalComponent } from './shared/components/feedback-form-modal/feedback-form-modal.component';
+import {MatDialogModule} from "@angular/material/dialog";
 
 
 @NgModule({
@@ -36,6 +39,7 @@ import {ActivityModule} from "./activity/activity.module";
         FeedbackFormComponent,
         MainLayoutContainerComponent,
         PrivacyPolicyComponent,
+        FeedbackFormModalComponent,
     ],
     exports: [
         MapContactsComponent
@@ -47,6 +51,8 @@ import {ActivityModule} from "./activity/activity.module";
     ServicesModule,
     NewsModule,
     ActivityModule,
+    ReactiveFormsModule,
+    MatDialogModule,
   ]
 })
 export class ArhplanModule { }

@@ -1,0 +1,45 @@
+.button-close {
+  position: absolute;
+  right: -60px;
+  top: -60px;
+  cursor: pointer;
+  background: transparent;
+  width: 65px;
+  height: 65px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s;
+
+  svg {
+    width: 60px;
+    height: 60px;
+    fill: #fff;
+  }
+}
+
+.feedback-form__submit {
+  width: 100%;
+  margin-bottom: 40px;
+
+  @media (max-height: 700px) {
+    box-shadow: none !important;
+    margin-bottom: 5px;
+  }
+}
+
+.feedback-modal {
+  mat-dialog-actions {
+    padding: 0 !important;
+    min-height: auto !important;
+    margin-bottom: 0 !important;
+  }
+}
+
+@media (hover: hover) {
+  .button-close {
+    &:hover {
+      opacity: 0.6;
+    }
+  }
+}

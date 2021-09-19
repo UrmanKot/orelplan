@@ -596,4 +596,38 @@ arh-login-page {
   }
 }
 
+.feedback-modal {
+  .mat-dialog-container {
+    position: relative;
+    overflow: inherit;
+  }
+}
+
+.feedback-modal {
+  mat-dialog-actions {
+    padding: 0 !important;
+    min-height: auto !important;
+    margin-bottom: 0 !important;
+  }
+
+  .mat-dialog-content {
+    overflow: inherit;
+    max-height: 75vh;
+
+    @media (max-height: 700px) {
+      overflow: auto;
+      max-height: 65vh;
+    }
+  }
+
+  .mat-dialog-container {
+    padding: 40px 40px 0;
+
+    @media (max-height: 700px) {
+      padding-bottom: 35px;
+    }
+  }
+}
+
 @import "app/arhplan/news/news";
+@import "app/arhplan/shared/components/feedback-form/feedback-form";

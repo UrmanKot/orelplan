@@ -1,0 +1,40 @@
+@import "../../../../../variables";
+
+.gisogd__row {
+  display: grid;
+  gap: 30px;
+  margin-bottom: 30px;
+
+  &_3 {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  &_4 {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.gisogd__item {
+  padding: 20px 25px 55px;
+  background: #fff;
+  box-shadow: 0 25px 50px -21px rgb(0 0 0 / 30%);
+  border: 1px solid #ebebeb;
+  border-radius: 20px;
+  border-bottom: 3px solid $theme-color-primary;
+
+  h3 {
+    font-weight: 700;
+    color: $theme-color-primary;
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+  }
+
+  p {
+    font-size: 0.85rem;
+    font-weight: 500;
+  }
+
+  &_col {
+    grid-column: 2 / 3;
+  }
+}

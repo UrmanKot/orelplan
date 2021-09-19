@@ -57,6 +57,7 @@
   position: relative;
   z-index: 1;
   padding: 20px 25px 18px;
+  border-bottom: 3px solid $theme-color-primary;
 
   h3 {
     font-size: 1.15rem;
@@ -88,19 +89,19 @@
     width: 2px;
 
     &_1 {
-      height: 740px;
+      height: 746px;
       top: 0;
       left: 41px;
     }
 
     &_2 {
-      height: 555px;
+      height: 561px;
       top: 185px;
       left: 464px;
     }
 
     &_3 {
-      height: 320px;
+      height: 325px;
       top: 185px;
       left: 887px;
     }

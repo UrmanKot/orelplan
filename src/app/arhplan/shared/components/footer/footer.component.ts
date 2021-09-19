@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import {MatDialog} from "@angular/material/dialog";
+import {FeedbackFormModalComponent} from "../feedback-form-modal/feedback-form-modal.component";
 
 @Component({
   selector: 'arh-footer',
@@ -9,10 +11,24 @@ export class FooterComponent implements OnInit {
 
   currentDate: Date;
 
-  constructor() { }
+  constructor(
+    private dialog: MatDialog
+  ) { }
 
   ngOnInit(): void {
     this.currentDate = new Date();
   }
 
+  openFeedback() {
+    this.dialog.open<FeedbackFormModalComponent>(FeedbackFormModalComponent, {
+      width: 'auto',
+      height: 'auto',
+      autoFocus: false,
+      panelClass: 'feedback-modal',
+    });
+  }
+
+  close() {
+
+  }
 }

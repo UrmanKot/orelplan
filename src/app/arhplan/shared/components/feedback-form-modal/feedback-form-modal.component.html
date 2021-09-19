@@ -1,0 +1,65 @@
+<div class="feedback-form">
+  <mat-dialog-content>
+    <div class="feedback-form__inner">
+      <form action="" class="feedback-form__form" [formGroup]="formModal" (ngSubmit)="submit()">
+        <div class="feedback-form__form-field" [class.invalid]="formModal.get('userName')?.invalid && submitted">
+          <label>Ваше имя</label>
+          <input type="text" placeholder="Иван Иванов" formControlName="userName">
+          <div class="validation" *ngIf="formModal.get('userName')?.invalid && submitted">
+            <small *ngIf="formModal.get('userName')?.errors?.required">
+              Введите ваше имя
+            </small>
+          </div>
+        </div>
+        <div class="feedback-form__form-field" [class.invalid]="formModal.get('phone')?.invalid && submitted">
+          <label>Ваш телефон</label>
+          <input type="text" placeholder="+7 (999) 999-99-99" formControlName="phone">
+          <div class="validation" *ngIf="formModal.get('phone')?.invalid && submitted">
+            <small *ngIf="formModal.get('phone')?.errors?.required">
+              Введите номер телефона
+            </small>
+            <small *ngIf="formModal.get('phone')?.errors.pattern">
+              Номер телефона должен быть в формате: +7 (999) 999-99-99
+            </small>
+          </div>
+        </div>
+        <div class="feedback-form__form-field" [class.invalid]="formModal.get('subjectMessage')?.invalid && submitted">
+          <label>Тема сообщения</label>
+          <input type="text" placeholder="Введите тему сообщения" formControlName="subjectMessage">
+          <div class="validation" *ngIf="submitted && formModal.get('subjectMessage')?.invalid">
+            <small *ngIf="formModal.get('subjectMessage')?.errors?.required">
+              Введите тему сообщения
+            </small>
+          </div>
+        </div>
+        <div class="feedback-form__form-field" [class.invalid]="formModal.get('textMessage')?.invalid && submitted">
+          <label>Текст сообщения</label>
+          <textarea placeholder="Введите текс сообщения" formControlName="textMessage"></textarea>
+          <div class="validation" *ngIf="submitted && formModal.get('textMessage')?.invalid">
+            <small *ngIf="formModal.get('textMessage')?.errors?.required">
+              Введите текст сообщения
+            </small>
+          </div>
+        </div>
+        <div class="feedback-form__agree">
+          <input type="checkbox" checked id="agreements" formControlName="isAgree">
+          <label for="agreements">
+          <span class="checkbox-indicator">
+            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#000000"><path
+              d="M0 0h24v24H0V0z" fill="none"/><path
+              d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/></svg>
+          </span>
+            <span class="text">Я соглашаюсь с <a target="_blank" routerLink="privacy-policy" class="link">политикой конфиденциальности</a></span>
+          </label>
+        </div>
+        <button class="feedback-form__submit btn btn-primary" [disabled]="formModal.get('isAgree').value === false">Отправить</button>
+      </form>
+    </div>
+  </mat-dialog-content>
+  <mat-dialog-actions>
+    <button class="button-close" (click)="close()">
+      <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#000000"><path d="M0 0h24v24H0z" fill="none"/><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+    </button>
+  </mat-dialog-actions>
+</div>
+

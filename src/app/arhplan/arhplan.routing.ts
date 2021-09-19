@@ -20,6 +20,7 @@ const routes: Routes = [
       {path: 'services', loadChildren: () => import('./services/services.module').then(m => m.ServicesModule) },
       {path: 'projects', loadChildren: () => import('./projects/projects.module').then(m => m.ProjectsModule) },
       {path: 'activity', loadChildren: () => import('./activity/activity.module').then(m => m.ActivityModule) },
+      {path: 'gisogd', loadChildren: () => import('./gisogd/gisogd.module').then(m => m.GisogdModule) },
       {path: 'news', loadChildren: () => import('./news/news.module').then(m => m.NewsModule) },
       {path: 'privacy-policy', component: PrivacyPolicyComponent},
     ]
